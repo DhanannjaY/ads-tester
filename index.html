@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- 🔥 KEEP THIS: Adstork Site Verification Tag -->
     <meta name="adstork-site-verification" content="adstork-site-verification-aa6255abeb7c889a20a12580b27ba7b0958a" />
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Himalayan Wanderer - Premium Nepal Travel Blog</title>
@@ -12,25 +10,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts: Lora (Serif) & Plus Jakarta Sans (Sans) -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- ================================================================================== -->
-    <!-- 🔥 ADSTORK SCRIPT - LOADED ONCE IN HEAD (Best Practice) -->
-    <!-- ================================================================================== -->
-    <script async src="https://direct.us.adstork.com/v1/serve.js?fid=8d6cff51-9fc0-431a-bcf7-0a4ac62d3cdd"></script>
-
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #f8fafc; /* Slate 50 */
-            color: #0f172a; /* Slate 900 */
+            background-color: #f8fafc;
+            color: #0f172a;
         }
         h1, h2, h3, .font-serif {
             font-family: 'Lora', serif;
         }
         
-        /* Premium Ad Slot Styling */
+        /* Premium Ad Container (Supports Banners, Video, Native) */
         .ad-container {
             position: relative;
             background-color: #ffffff;
@@ -39,8 +32,10 @@
             overflow: hidden;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -2px rgba(0, 0, 0, 0.02);
             transition: all 0.3s ease;
-            text-align: center; /* Centers the injected ad iframe */
-            margin: 0 auto; /* Centers the container itself */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
         
         .ad-container:hover {
@@ -63,21 +58,7 @@
             border: 1px solid #f1f5f9;
         }
 
-        /* Mock Ad Content for Placeholders */
-        .mock-ad-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            width: 100%;
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            color: #475569;
-            text-align: center;
-            padding: 12px;
-        }
-
-        /* Native Ad Styling */
+        /* Native Ad Styling (Looks like a blog post) */
         .native-ad {
             background: #ffffff;
             border: 1px solid #e2e8f0;
@@ -104,6 +85,29 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #e2e8f0;
+        }
+
+        /* Video Ad Styling */
+        .video-ad-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            background: #0f172a;
+            overflow: hidden;
+        }
+        .video-ad-container video, .video-ad-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Sticky Sidebar */
+        .sticky-sidebar {
+            position: sticky;
+            top: 6rem;
         }
 
         /* Push Notification Modal */
@@ -139,7 +143,7 @@
             padding: 20px;
             display: none;
             z-index: 1000;
-            width: 300px;
+            width: 320px;
             animation: fadeIn 0.2s ease-out;
         }
 
@@ -147,35 +151,6 @@
             from { opacity: 0; transform: scale(0.95); }
             to { opacity: 1; transform: scale(1); }
         }
-
-        /* Video Ad Container */
-        .video-ad-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            background: #0f172a;
-            overflow: hidden;
-        }
-        .video-ad-container video, .video-ad-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Sticky Sidebar */
-        .sticky-sidebar {
-            position: sticky;
-            top: 6rem;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f5f9; }
-        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
     </style>
 </head>
 <body class="antialiased selection:bg-teal-100 selection:text-teal-900">
@@ -207,6 +182,17 @@
             </div>
         </div>
     </header>
+
+    <!-- ================= AD SLOT 1: TOP LEADERBOARD (728x90) ================= -->
+    <div class="w-full bg-white border-b border-slate-100 py-4 flex justify-center">
+        <div class="ad-container w-full max-w-[728px] h-[90px] mx-4">
+            <span class="ad-label">Advertisement</span>
+            
+            <!-- 🔥 ADSTORK WORKING SCRIPT FORMAT -->
+            <div data-atk-fid="8d6cff51-9fc0-431a-bcf7-0a4ac62d3cdd"></div>
+            <script async src="https://direct.us.adstork.com/v1/serve.js?fid=8d6cff51-9fc0-431a-bcf7-0a4ac62d3cdd"></script>
+        </div>
+    </div>
 
     <!-- ================= HERO SECTION ================= -->
     <section class="relative h-[600px] flex items-center justify-center overflow-hidden">
@@ -284,33 +270,40 @@
                 </article>
 
                 <!-- ================================================================================== -->
-                <!-- ========== AD SLOT 1 & 2: IN-FEED BANNERS (300x250 & 336x280) ================== -->
+                <!-- ========== AD SLOT 2 & 3: IN-FEED BANNER & NATIVE AD =========================== -->
                 <!-- ================================================================================== -->
-                <div class="flex flex-wrap justify-center gap-6 py-6">
+                <div class="space-y-6 py-6">
                     
-                    <!-- --- AD SLOT 1: 300x250 Medium Rectangle --- -->
-                    <div class="ad-container w-full max-w-[300px] h-[250px]">
-                        <span class="ad-label">Advertisement</span>
-                        
-                        <!-- 🔥 ADSTORK CONTAINER ONLY (Script is loaded once in <head>) -->
-                        <div data-atk-fid="8d6cff51-9fc0-431a-bcf7-0a4ac62d3cdd"></div>
-                        
-                        <!-- 👇 MOCK AD CONTENT FOR TESTING (DELETE THIS BLOCK IF YOU WANT THE REAL AD TO SHOW) 👇 -->
-                        <!-- <div class="mock-ad-content"> ... </div> -->
-                        <!-- 👆 END MOCK AD CONTENT 👆 -->
+                    <!-- --- AD SLOT 2: Standard Display Banner (300x250) --- -->
+                    <div class="flex justify-center">
+                        <div class="ad-container w-full max-w-[300px] h-[250px]">
+                            <span class="ad-label">Advertisement</span>
+                            <!-- 🔥 ADSTORK WORKING SCRIPT FORMAT -->
+                            <div data-atk-fid="8d6cff51-9fc0-431a-bcf7-0a4ac62d3cdd"></div>
+                            <script async src="https://direct.us.adstork.com/v1/serve.js?fid=8d6cff51-9fc0-431a-bcf7-0a4ac62d3cdd"></script>
+                        </div>
                     </div>
 
-                    <!-- --- AD SLOT 2: 336x280 Large Rectangle --- -->
-                    <div class="ad-container w-full max-w-[336px] h-[280px]">
-                        <span class="ad-label">Advertisement</span>
-                        <!-- 👇 MOCK AD CONTENT - DELETE THIS BLOCK WHEN ADDING REAL AD 👇 -->
-                        <div class="mock-ad-content">
-                            <i class="fas fa-hiking text-3xl text-amber-600 mb-2"></i>
-                            <span class="text-sm font-bold text-slate-800">Trekking Gear Sale</span>
-                            <span class="text-xs text-slate-500 mt-1">Up to 40% off on premium down jackets.</span>
-                            <button class="mt-3 bg-amber-500 text-white text-xs font-bold px-5 py-2 rounded-full">Shop Now</button>
+                    <!-- --- AD SLOT 3: Native Ad Format (Blends with blog) --- -->
+                    <!-- 🛠️ REPLACE WITH YOUR NATIVE AD NETWORK CODE (e.g., Taboola, Outbrain, or Adstork Native) -->
+                    <div class="native-ad max-w-2xl mx-auto">
+                        <div class="native-ad-header">
+                            <span><i class="fas fa-bullhorn mr-2 text-teal-600"></i> Sponsored Content</span>
+                            <span class="text-[10px] text-slate-400 bg-slate-100 px-2 py-0.5 rounded">by Himalayan Gear Co.</span>
                         </div>
-                        <!-- 👆 END MOCK AD CONTENT 👆 -->
+                        <div class="p-6 flex flex-col md:flex-row gap-6 items-center">
+                            <div class="md:w-1/3">
+                                <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                                     alt="Trekking Gear" class="w-full h-32 object-cover rounded-xl shadow-md">
+                            </div>
+                            <div class="md:w-2/3">
+                                <h4 class="text-lg font-bold text-slate-900 mb-2">10 Essential Items for Your Everest Trek</h4>
+                                <p class="text-slate-600 text-sm mb-3 leading-relaxed">Don't hit the trail without these lightweight, high-performance gear picks trusted by Sherpa guides.</p>
+                                <button class="text-sm font-bold text-teal-700 hover:text-teal-800 flex items-center gap-2 transition-colors">
+                                    Shop Now <i class="fas fa-arrow-right text-xs"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -365,18 +358,24 @@
             <aside class="lg:col-span-4">
                 <div class="sticky-sidebar space-y-8">
                     
-                    <!-- ================================================================================== -->
-                    <!-- ================= AD SLOT 3: SIDEBAR MEDIUM RECTANGLE (300x250) ================ -->
-                    <!-- ================================================================================== -->
+                    <!-- ================= AD SLOT 4: SIDEBAR MEDIUM RECTANGLE (300x250) ================= -->
                     <div class="ad-container w-full h-[250px]">
                         <span class="ad-label">Advertisement</span>
-                        
-                        <!-- 🔥 ADSTORK CONTAINER ONLY (Script is loaded once in <head>) -->
+                        <!-- 🔥 ADSTORK WORKING SCRIPT FORMAT -->
                         <div data-atk-fid="8d6cff51-9fc0-431a-bcf7-0a4ac62d3cdd"></div>
-                        
-                        <!-- 👇 MOCK AD CONTENT FOR TESTING (DELETE THIS BLOCK IF YOU WANT THE REAL AD TO SHOW) 👇 -->
-                        <!-- <div class="mock-ad-content"> ... </div> -->
-                        <!-- 👆 END MOCK AD CONTENT 👆 -->
+                        <script async src="https://direct.us.adstork.com/v1/serve.js?fid=8d6cff51-9fc0-431a-bcf7-0a4ac62d3cdd"></script>
+                    </div>
+
+                    <!-- ================= AD SLOT 5: SIDEBAR VIDEO AD (300x250) ================= -->
+                    <!-- 🛠️ REPLACE THE VIDEO TAG WITH YOUR VIDEO AD NETWORK'S IFRAME OR SCRIPT -->
+                    <div class="ad-container w-full h-[250px]">
+                        <span class="ad-label">Video Advertisement</span>
+                        <div class="video-ad-container h-full">
+                            <video controls poster="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80">
+                                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
                     </div>
 
                     <!-- Popular Posts Widget -->
@@ -427,6 +426,19 @@
         </div>
     </main>
 
+    <!-- ================= AD SLOT 6: BOTTOM BILLBOARD (970x250) ================= -->
+    <div class="w-full bg-white border-t border-b border-slate-200 py-8 flex justify-center">
+        <div class="ad-container w-full max-w-[970px] h-[250px] mx-4 hidden md:flex">
+            <span class="ad-label">Advertisement</span>
+            <!-- PASTE YOUR 970x250 AD CODE HERE -->
+            <span class="text-slate-400 text-sm">970 x 250 Billboard Placeholder</span>
+        </div>
+        <div class="ad-container w-full max-w-[320px] h-[100px] mx-4 md:hidden">
+            <span class="ad-label">Advertisement</span>
+            <span class="text-slate-400 text-sm">320 x 100 Mobile Placeholder</span>
+        </div>
+    </div>
+
     <!-- ================= FOOTER ================= -->
     <footer class="bg-slate-950 text-slate-400 py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
@@ -473,6 +485,16 @@
         </div>
     </footer>
 
+    <!-- ================= STICKY MOBILE AD (320x50) ================= -->
+    <div class="fixed bottom-0 left-0 w-full bg-white border-t border-slate-200 p-2 flex justify-center z-40 md:hidden shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+        <div class="ad-container w-full max-w-[320px] h-[50px]">
+            <span class="ad-label" style="top: 2px; left: 4px; font-size: 0.45rem;">Ad</span>
+            <!-- PASTE YOUR 320x50 AD CODE HERE -->
+            <span class="text-slate-400 text-[10px]">320 x 50 Placeholder</span>
+        </div>
+    </div>
+    <div class="h-16 md:hidden"></div>
+
     <!-- ================= AD TESTER PANEL ================= -->
     <button id="toggle-tester" class="fixed bottom-32 right-6 bg-slate-900 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center z-50 hover:bg-slate-800 hover:scale-105 transition-all" title="Ad Tester Panel">
         <i class="fas fa-flask text-xl"></i>
@@ -483,7 +505,7 @@
             <h3 class="font-bold text-slate-800 text-sm flex items-center gap-2"><i class="fas fa-flask text-teal-600"></i> Ad Tester Panel</h3>
             <button id="close-tester" class="text-slate-400 hover:text-slate-600 bg-slate-50 hover:bg-slate-100 w-8 h-8 rounded-full flex items-center justify-center transition-colors"><i class="fas fa-times"></i></button>
         </div>
-        <p class="text-xs text-slate-500 mb-5 leading-relaxed">Simulate different ad formats to test layout and user experience. Real ads require network integration.</p>
+        <p class="text-xs text-slate-500 mb-5 leading-relaxed">Simulate ad formats to test layout. Real ads require network integration.</p>
         
         <div class="space-y-3">
             <button onclick="simulatePopunder()" class="w-full text-left bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700 text-xs font-semibold py-3 px-4 rounded-xl transition-colors flex items-center gap-3 group">
@@ -548,7 +570,7 @@
         });
 
         function simulatePopunder() {
-            alert("Simulated Popunder Ad:\n\nThis is where a real Popunder ad would open in a new window/tab.\n\nIn a live environment, this is triggered by a user click and opens an advertiser's landing page.");
+            alert("Simulated Popunder Ad:\n\nThis is where a real Popunder ad would open in a new window/tab.");
         }
 
         function simulatePush() {
@@ -577,9 +599,8 @@
             
             adContainers.forEach(container => {
                 const wasHidden = container.classList.contains('hidden');
-                
                 if (adsVisible) {
-                    container.style.display = wasHidden ? 'none' : 'block';
+                    container.style.display = wasHidden ? 'none' : 'flex';
                 } else {
                     container.style.display = 'none';
                 }
